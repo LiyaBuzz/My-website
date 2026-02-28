@@ -1,0 +1,151 @@
+<!DOCTYPE Html>
+
+<Html lang="en">    
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mom of girls Diaries</title>
+        <link rel="stylesheet" href="Style.css" />
+        <style>
+            .search-container {
+                position: absolute;
+                right: 2rem;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .search-bar {
+                display: flex;
+                align-items: center;
+                background: white;
+                border-radius: 25px;
+                padding: 0.5rem 1rem;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease;
+            }
+
+            .search-bar input {
+                border: none;
+                outline: none;
+                padding: 0.5rem;
+                font-size: 1rem;
+                width: 0;
+                transition: width 0.3s ease;
+                background: transparent;
+            }
+
+            .search-bar.active input {
+                width: 200px;
+            }
+
+            .search-icon {
+                color: #667eea;
+                font-size: 1.2rem;
+                cursor: pointer;
+                transition: transform 0.3s ease;
+            }
+
+            .search-icon:hover {
+                transform: scale(1.1);
+            }
+
+            header nav {
+                position: relative;
+                padding: 0 1rem;
+            }
+
+            @media (max-width: 768px) {
+                .search-container {
+                    right: 1rem;
+                }
+
+                .search-bar.active input {
+                    width: 150px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="Blog.html">Blog</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                </ul>
+                <div class="search-container">
+                    <div class="search-bar" id="searchBar">
+                        <input type="text" placeholder="Search..." id="searchInput">
+                        <span class="search-icon" onclick="toggleSearch()">🔍</span>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to The MopDriver Diaries</h1>
+                <p>Welcome to all things about being a Housekeeper and nanny</p>
+            </div>
+        </section>
+        
+        <section class="gallery">
+            <h2>Our Services</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="Images/close-up-cooking-dinner-46239.jpg" alt="Cooking services">
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/IMG-20240115-WA0025.jpg" alt="Housekeeping">
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/IMG-20240115-WA0027.jpg" alt="Home care">
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/mr-sheen-all-purpose-cleaners-600x600.png" alt="Cleaning products">
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <p>Follow us on social media:</p>
+        </footer>
+
+        <script>
+            function toggleSearch() {
+                const searchBar = document.getElementById('searchBar');
+                const searchInput = document.getElementById('searchInput');
+                searchBar.classList.toggle('active');
+                
+                if (searchBar.classList.contains('active')) {
+                    searchInput.focus();
+                }
+            }
+
+            // Close search bar when clicking outside
+            document.addEventListener('click', function(event) {
+                const searchBar = document.getElementById('searchBar');
+                const searchContainer = document.querySelector('.search-container');
+                
+                if (!searchContainer.contains(event.target)) {
+                    searchBar.classList.remove('active');
+                }
+            });
+
+            // Handle search on Enter key
+            document.getElementById('searchInput').addEventListener('keypress', function(event) {
+                if (event.key === 'Enter') {
+                    const searchQuery = this.value;
+                    if (searchQuery) {
+                        alert('Searching for: ' + searchQuery);
+                        // You can redirect to a search results page here
+                        // window.location.href = 'search.html?q=' + encodeURIComponent(searchQuery);
+                    }
+                }
+            });
+        </script>
+            
+    </body>
+</Html>

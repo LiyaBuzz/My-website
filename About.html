@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>      
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Mom of girls Diaries</title>                                                             
+    <link rel="stylesheet" href="Style.css">
+    <style>
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .story-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        .story-section h2 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .story-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+        .story-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        .story-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .story-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .mission-vision {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            color: #2c3e50;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            color: #555;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .values-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        .values-section h2 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .value-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .value-icon {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin: 0 auto 1rem;
+        }
+
+        .value-item h4 {
+            color: #2c3e50;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .value-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .team-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-section h2 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+            color: white;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .story-content {
+                grid-template-columns: 1fr;
+            }
+
+            .mission-vision {
+                grid-template-columns: 1fr;
+            }
+
+            .story-section h2,
+            .values-section h2,
+            .team-section h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="Blog.html">Blog</a></li>
+                <li><a href="Services.html">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>About Us</h1>
+            <p>Discover the story behind The MopDriver Diaries</p>
+        </div>
+    </section>
+
+    <div class="about-container">
+        <!-- Our Story -->
+        <div class="story-section">
+            <h2>Our Story</h2>
+            <div class="story-content">
+                <div class="story-text">
+                    <p>
+                        The MopDriver Diaries began with a simple vision: to transform the lives of families through 
+                        exceptional housekeeping and childcare services. Founded by a passionate young woman who rose 
+                        from humble beginnings as a cleaner to become a beacon of hope in her community.
+                    </p>
+                    <p>
+                        What started as a personal journey of dedication and hard work has blossomed into a thriving 
+                        service that touches countless lives. Our founder's commitment to excellence and genuine care 
+                        for families has become the cornerstone of everything we do.
+                    </p>
+                    <p>
+                        Today, we're proud to serve our community with the same values that inspired our beginning: 
+                        integrity, compassion, and an unwavering commitment to making every home a haven of comfort 
+                        and joy.
+                    </p>
+                </div>
+                <div class="story-image">
+                    <img src="Images/IMG-20240115-WA0025.jpg" alt="Our Journey">
+                </div>
+            </div>
+        </div>
+
+        <!-- Mission & Vision -->
+        <div class="mission-vision">
+            <div class="card">
+                <div class="card-icon">🎯</div>
+                <h3>Our Mission</h3>
+                <p>
+                    To provide exceptional housekeeping and childcare services that allow families to focus on 
+                    what truly matters - creating lasting memories and nurturing relationships. We strive to be 
+                    the trusted partner in every home we serve.
+                </p>
+            </div>
+            <div class="card">
+                <div class="card-icon">✨</div>
+                <h3>Our Vision</h3>
+                <p>
+                    To be the leading provider of premium home care services, recognized for our professionalism, 
+                    reliability, and the positive impact we make in families' lives. We envision a community where 
+                    every home thrives with our support.
+                </p>
+            </div>
+        </div>
+
+        <!-- Core Values -->
+        <div class="values-section">
+            <h2>Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-item">
+                    <div class="value-icon">💎</div>
+                    <h4>Excellence</h4>
+                    <p>We maintain the highest standards in everything we do, from cleaning to childcare.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">❤️</div>
+                    <h4>Compassion</h4>
+                    <p>We treat every family with genuine care, respect, and understanding.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">🤝</div>
+                    <h4>Integrity</h4>
+                    <p>We build trust through honesty, transparency, and ethical practices.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">🌟</div>
+                    <h4>Innovation</h4>
+                    <p>We continuously improve our methods to serve you better.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">👨‍👩‍👧‍👦</div>
+                    <h4>Community</h4>
+                    <p>We're committed to uplifting and supporting our local community.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">⏰</div>
+                    <h4>Reliability</h4>
+                    <p>You can count on us to be there when you need us most.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Why Choose Us -->
+        <div class="team-section">
+            <h2>Why Choose Us</h2>
+            <p style="text-align: center; font-size: 1.1rem; color: #555; margin-bottom: 2rem;">
+                We're more than just a cleaning and childcare service - we're partners in creating the home and family life you've always dreamed of.
+            </p>
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Happy Families</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Satisfaction Rate</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support Available</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Follow us on social media: Facebook | Instagram | Twitter</p>
+    </footer>
+</body>
+</html>
